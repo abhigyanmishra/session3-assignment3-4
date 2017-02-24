@@ -1,0 +1,8 @@
+Name Node (also known as master) is the center piece of HDFS. We know Hadoop uses HDFS to store files efficiently in the cluster.
+So the Name Node basically manages HDFS storage.
+The NameNode in Hadoop is the node where Hadoop stores all the location information of the files in HDFS.
+Tracks of all the files in the cluster, infact the directory tree- only metadata is stored by name node. But name node does not actually stores the data (Data is stored in data nodes). It is usually alloted a lot of RAM.
+To ensure high availability, you have both an active NameNode and a standby NameNode. Each runs on its own, dedicated master node.
+
+Secondary Name Node
+The secondary name node is responsible for performing periodic housekeeping functions for the NameNode. It only creates checkpoints of the filesystem present in the NameNode.
